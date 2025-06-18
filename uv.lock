@@ -178,6 +178,7 @@ name = "datacleaner-backend"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "bcrypt" },
     { name = "fastapi", extra = ["standard"] },
     { name = "passlib", extra = ["bcrypt"] },
     { name = "psycopg2-binary" },
@@ -190,6 +191,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "bcrypt", specifier = ">=4.3.0" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.115.12" },
     { name = "passlib", extras = ["bcrypt"], specifier = ">=1.7.4" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
